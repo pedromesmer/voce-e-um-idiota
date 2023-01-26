@@ -12,6 +12,11 @@ interface props {
 export const Container = styled.button<props>`
   position: absolute;
 
+  padding: 10px 25px;
+  font-size: 20px;
+
+  border-radius: 5px;
+
   ${props =>
     props.newPosition &&
     css`
