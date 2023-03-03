@@ -1,5 +1,6 @@
 /* eslint-disable react/button-has-type */
 import React, { useCallback, useRef, useState } from 'react';
+import ts from '@tensorflow/tfjs';
 import { Button } from '../../components/Button';
 
 import { Container } from './styles';
