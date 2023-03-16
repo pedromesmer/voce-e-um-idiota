@@ -8,6 +8,14 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
+  #canvas-wrapper {
+    position: relative;
+    border: 1px solid black;
+
+    width: 640px;
+    height: 500px;
+  }
+
   /*  */
   canvas,
   video {
@@ -34,4 +42,14 @@ export const Container = styled.div`
       margin: 0 20px;
     }
   }
+`;
+
+export const Point = styled.span`
+  position: absolute;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background-color: black;
 `;
