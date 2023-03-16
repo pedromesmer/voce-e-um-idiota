@@ -9,11 +9,12 @@ export const Container = styled.div`
   flex-direction: column;
 
   #canvas-wrapper {
-    position: relative;
+    position: absolute;
+    display: block;
     border: 1px solid black;
 
-    width: 640px;
-    height: 500px;
+    width: auto;
+    height: auto;
   }
 
   /*  */
@@ -24,8 +25,8 @@ export const Container = styled.div`
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     /* visibility: hidden; */
-    width: 640px;
-    height: 500px;
+    width: 64px;
+    height: 50px;
     /* border: 1px solid black; */
 
     z-index: -1;

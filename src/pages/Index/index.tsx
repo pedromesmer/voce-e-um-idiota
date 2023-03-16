@@ -68,9 +68,13 @@ const Index: React.FC = () => {
           const points = predictions[0].annotations.indexFinger[3];
 
           if (point) {
-            point.style.top = `${points[1]}px`;
-            point.style.right = `${points[0]}px`;
-            console.log(points);
+            // console.log(predictions);
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            point.style.right = `${(width / VIDEO_WIDTH) * points[0]}px`;
+            point.style.top = `${(height / VIDEO_HEIGHT) * points[1]}px`;
+            // console.log(points);
           }
         }
       }
@@ -102,6 +106,7 @@ const Index: React.FC = () => {
 
   return (
     <>
+      <Point id="point" />
       <Container>
         <h1>{title}</h1>
 
@@ -112,7 +117,6 @@ const Index: React.FC = () => {
         </div>
 
         <div id="canvas-wrapper">
-          <Point id="point" />
           <canvas id="canvas" />
           <video id="video" playsInline />
         </div>
