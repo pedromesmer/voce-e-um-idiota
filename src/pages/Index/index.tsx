@@ -67,8 +67,8 @@ const Index: React.FC = () => {
           const result = predictions[0].landmarks;
           const points = predictions[0].annotations.indexFinger[3];
 
-          if (point) {
-            // console.log(predictions);
+          if (point && predictions[0].handInViewConfidence > 0.99998) {
+            console.log(predictions);
             const width = window.innerWidth;
             const height = window.innerHeight;
 
@@ -108,13 +108,13 @@ const Index: React.FC = () => {
     <>
       <Point id="point" />
       <Container>
-        <h1>{title}</h1>
+        {/* <h1>{title}</h1>
 
         <div>
           <Button text="Sim" onClick={changeTitle} />
 
           <Button text="Não" noClick />
-        </div>
+        </div> */}
 
         <div id="canvas-wrapper">
           <canvas id="canvas" />

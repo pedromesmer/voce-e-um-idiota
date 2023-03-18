@@ -11,7 +11,6 @@ export const Container = styled.div`
   #canvas-wrapper {
     position: absolute;
     display: block;
-    border: 1px solid black;
 
     width: auto;
     height: auto;
@@ -20,16 +19,18 @@ export const Container = styled.div`
   /*  */
   canvas,
   video {
-    position: absolute;
+    /* position: absolute; */
 
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     /* visibility: hidden; */
-    width: 64px;
-    height: 50px;
+    width: 640px;
+    height: 500px;
+
+    margin-top: 1000px;
     /* border: 1px solid black; */
 
-    z-index: -1;
+    z-index: -10;
   }
 
   div {
@@ -53,4 +54,6 @@ export const Point = styled.span`
   border-radius: 50%;
 
   background-color: black;
+
+  z-index: 99;
 `;
